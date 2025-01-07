@@ -3,6 +3,11 @@ name: Run Maven (reactor) build with all components
 on:
   push:
   workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to initialize repo with'
+        required: false
+        default: 'master'
 
 jobs:
   initialize-repo:
@@ -21,7 +26,7 @@ jobs:
 
       - name: Initialize repo
         run: |
-          repo init -u sources -m default.xml -b master
+          repo init -u sources -m default.xml -b ${{ github.event.inputs.branch || 'master' }}
           repo sync
 
       - name: Set up JDK 21
