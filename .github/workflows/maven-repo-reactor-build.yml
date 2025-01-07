@@ -31,7 +31,7 @@ jobs:
 
       - name: Initialize repo
         run: |
-          repo init -u sources -m default.xml -b ${{ github.event.inputs.branch || 'master' }}
+          repo init -u sources -m default.xml -b ${{ github.event.inputs.branch || 'origin/master' }}
           .repo/repo/repo sync
 
       - name: Set up JDK 21
