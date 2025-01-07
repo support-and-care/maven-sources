@@ -21,7 +21,7 @@ jobs:
 
       - name: Initialize repo
         run: |
-          repo init -u sources -m default.xml
+          repo init -u sources -m default.xml -b master
           repo sync
 
       - name: Set up JDK 21
