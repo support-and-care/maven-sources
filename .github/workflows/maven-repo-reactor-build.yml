@@ -21,7 +21,9 @@ jobs:
 
       - name: Initialize repo
         run: |
-          repo init https://github.com/${{ env.GITHUB_ORG }}/maven-sources.git -b ${{ github.event.inputs.branch }}
+          repo init \
+            https://github.com/${{ github.repository_owner }}/maven-sources.git \
+            -b ${{ github.event.inputs.branch || 'master' }}
           .repo/repo/repo sync
 
       - name: Set up JDK 21
