@@ -14,16 +14,6 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          path: sources
-
-      - name: Fetch all git branches
-        run: |
-          cd sources
-          git fetch --all
-
       - name: Install repo tool
         run: |
           sudo apt-get update
@@ -31,7 +21,7 @@ jobs:
 
       - name: Initialize repo
         run: |
-          repo init -u sources -m default.xml -b ${{ github.event.inputs.branch || 'origin/master' }}
+          repo init https://github.com/support-and-care/maven-sources.git -m default.xml -b ${{ github.event.inputs.branch || 'origin/master' }}
           .repo/repo/repo sync
 
       - name: Set up JDK 21
