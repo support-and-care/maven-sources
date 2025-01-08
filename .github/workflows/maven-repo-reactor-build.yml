@@ -5,16 +5,16 @@ on:
   workflow_dispatch:
     inputs:
       branch:
-        description: 'Branch to initialize repo with'
+        description: 'Branch to initialize repo with (use default branch if empty)'
         required: false
-        default: ${{ github.ref }}
+        default: ''
 
 jobs:
   initialize-repo:
     runs-on: ubuntu-24.04
 
     env:
-      BRANCH: "${{ github.event.inputs.branch || github.ref }}"
+      BRANCH: "${{ github.event.inputs.branch || github.ref_name }}"
 
     steps:
       - name: Install repo tool
