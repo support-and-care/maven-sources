@@ -7,14 +7,14 @@ on:
       branch:
         description: 'Branch to initialize repo with'
         required: false
-        default: "${{ github.ref_name }}"
+        default: ${{ github.ref }}
 
 jobs:
   initialize-repo:
     runs-on: ubuntu-24.04
 
     env:
-      BRANCH: "${{ github.event.inputs.branch || github.ref_name }}"
+      BRANCH: "${{ github.event.inputs.branch || github.ref }}"
 
     steps:
       - name: Install repo tool
