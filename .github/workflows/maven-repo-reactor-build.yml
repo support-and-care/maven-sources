@@ -7,11 +7,14 @@ on:
       branch:
         description: 'Branch to initialize repo with'
         required: false
-        default: 'master'
+        default: "${{ github.ref_name }}"
 
 jobs:
   initialize-repo:
     runs-on: ubuntu-24.04
+
+    env:
+      BRANCH: "${{ github.event.inputs.branch || github.ref_name }}"
 
     steps:
       - name: Install repo tool
@@ -22,8 +25,8 @@ jobs:
       - name: Initialize repo
         run: |
           repo init \
-            https://github.com/${{ github.repository_owner }}/maven-sources.git \
-            -b ${{ github.event.inputs.branch || 'master' }}
+            "https://github.com/${{ github.repository_owner }}/maven-sources.git" \
+            -b "${{ env.BRANCH }}"
           .repo/repo/repo sync
 
       - name: Set up JDK 21
