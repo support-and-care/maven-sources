@@ -105,7 +105,7 @@
   <project path='shared/reporting-impl'                     name='maven-reporting-impl.git' />
   <project path='shared/script-interpreter'                 name='maven-script-interpreter.git' />
   <project path='shared/shared-incremental'                 name='maven-shared-incremental.git' />
-  <project path='shared/shared-io'                          name='maven-shared-io.git' remote='sac' />
+  <project path='shared/shared-io'                          name='maven-shared-io.git' />
   <project path='shared/shared-jar'                         name='maven-shared-jar.git' />
   <project path='shared/shared-resources'                   name='maven-shared-resources.git' />
   <project path='shared/shared-utils'                       name='maven-shared-utils.git' />
@@ -114,10 +114,10 @@
   <project path='doxia/doxia'                               name='maven-doxia.git' />
   <project path='doxia/site'                                name='maven-doxia-site.git' />
   <project path='doxia/sitetools'                           name='maven-doxia-sitetools.git' />
-  <project path='doxia/tools/doxia-book-maven-plugin'       name='maven-doxia-book-maven-plugin.git' remote='sac' />
-  <project path='doxia/tools/doxia-book-renderer'           name='maven-doxia-book-renderer.git' remote='sac' />
+  <project path='doxia/tools/doxia-book-maven-plugin'       name='maven-doxia-book-maven-plugin.git' />
+  <project path='doxia/tools/doxia-book-renderer'           name='maven-doxia-book-renderer.git' />
   <project path='doxia/tools/converter'                     name='maven-doxia-converter.git' />
-  <project path='doxia/tools/linkcheck'                     name='maven-doxia-linkcheck.git' remote='sac' />
+  <project path='doxia/tools/linkcheck'                     name='maven-doxia-linkcheck.git' />
 
   <project path='misc/archetypes'                           name='maven-archetypes.git' />
   <project path='misc/pom/maven'                            name='maven-parent.git' />
@@ -134,12 +134,12 @@
   <project path='misc/wagon'                                name='maven-wagon.git' />
 
   <project path='studies/master'                            name='maven-studies.git' />
-  <project path='studies/consumer-pom'                      name='maven-studies.git' revision="consumer-pom" remote='sac' />
+  <project path='studies/consumer-pom'                      name='maven-studies.git' revision="consumer-pom" />
   <project path='studies/maven-basedir-filesystem'          name='maven-studies.git' revision="maven-basedir-filesystem" />
   <project path='studies/maven-ci-extension'                name='maven-studies.git' revision="maven-ci-extension" />
   <project path='studies/maven-default-plugins'             name='maven-studies.git' revision="maven-default-plugins" />
-  <project path='studies/maven-eventsound-extension'        name='maven-studies.git' revision="maven-eventsound-extension" remote='sac' />
-  <project path='studies/maven-extension-demo'              name='maven-studies.git' revision="maven-extension-demo" remote='sac' />
+  <project path='studies/maven-eventsound-extension'        name='maven-studies.git' revision="maven-eventsound-extension" />
+  <project path='studies/maven-extension-demo'              name='maven-studies.git' revision="maven-extension-demo" />
 
   <project path='svn/repository-tools'                      name='maven-repository-tools.git'    revision='trunk' />
   <project path='svn/sandbox'                               name='maven-sandbox.git'             revision='trunk' />
