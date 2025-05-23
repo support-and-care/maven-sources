@@ -15,7 +15,7 @@ repo sync
 repo start master --all
 ```
 
-Resulting directory tree looks like:
+The resulting directory tree looks like:
 
 ```
 |-- core
@@ -58,6 +58,7 @@ Resulting directory tree looks like:
 |   |   `-- fluido
 |   `-- wagon
 |-- plexus
+|   |-- .github
 |   |-- classworlds
 |   |-- codehaus-plexus.github.io
 |   |-- components
@@ -70,7 +71,6 @@ Resulting directory tree looks like:
 |   |   |-- languages
 |   |   |-- resources
 |   |   |-- sec-dispatcher
-|   |   |-- testing
 |   |   `-- velocity
 |   |-- modello
 |   |-- plexus-containers
